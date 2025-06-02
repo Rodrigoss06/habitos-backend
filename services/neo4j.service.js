@@ -8,7 +8,7 @@ if (!uri || !user || !password) {
   throw new Error('Faltan variables de entorno para Neo4j');
 }
 console.log('NEO4J_URI:', process.env.NEO4J_URI);
-console.log('NEO4J_USERNAME:', process.env.NEO4J_USERNAME);
+console.log('NEO4J_USERNAME:', process.env.NEO4J_USER);
 console.log('NEO4J_PASSWORD:', process.env.NEO4J_PASSWORD ? '****' : 'no definido');
 
 const driver = neo4j.driver(uri, neo4j.auth.basic(user, password));
